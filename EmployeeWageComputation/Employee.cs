@@ -3,7 +3,7 @@ namespace EmployeeWageComputation
 {
 	public class Employee
 	{
-		public void IsPresent()
+		public int IsPresent()
 		{
 			const int PRESENT = 1;
 			Random rnd = new Random();
@@ -13,14 +13,23 @@ namespace EmployeeWageComputation
 			if(rnd_num == PRESENT)
 			{
 				Console.WriteLine("The Employee is Present");
+				return 1;
 			}
 
 			else
 			{
+
                 Console.WriteLine("The Employee is Absent");
+				return 0;
             }
 
 		}
+
+		
+
+
+
+
 	}
 }
 
