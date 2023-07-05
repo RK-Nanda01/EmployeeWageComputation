@@ -19,6 +19,9 @@ class Program
         Console.WriteLine("UC3:-");
         emp.PartTime();
 
+        //UC4
+        emp.PartTimeSwtich();
+
     }
 
 }

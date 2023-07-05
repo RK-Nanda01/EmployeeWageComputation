@@ -89,6 +89,49 @@ namespace EmployeeWageComputation
 
         }
 
+		public int PartTimeSwtich()
+		{
+            const int PART_TIME = 1;
+            const int FULL_TIME = 2;
+            const int ABSENT = 0;
+            const int RATE_PER_HOUR = 20;
+            int empHours = 0;
+            int wage;
+
+            Random rnd = new Random();
+            int rnd_num = rnd.Next(0, 3);
+
+			switch(rnd_num)
+			{
+
+				case PART_TIME:
+				{
+						empHours = 4;
+						break;
+				}
+
+				case FULL_TIME:
+				{
+						empHours = 8;
+						break;
+				}
+
+				 default:
+				{
+						empHours = 0;
+						break;
+				}
+
+
+			}
+
+			wage = empHours * RATE_PER_HOUR;
+			Console.WriteLine($"UC-4 Wage of Employee is {wage}");
+			return wage;
+
+        }
+
+
 
     }
 
