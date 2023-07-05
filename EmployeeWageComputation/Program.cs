@@ -25,6 +25,9 @@ class Program
         //UC5
         emp.MonthlyWage();
 
+        //UC6
+        emp.TotalWage();
+
     }
 
 }

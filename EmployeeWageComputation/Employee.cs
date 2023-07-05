@@ -186,6 +186,60 @@ namespace EmployeeWageComputation
         }
 
 
+		public int TotalWage()
+		{
+
+            const int PART_TIME = 1;
+            const int FULL_TIME = 2;
+
+            const int RATE_PER_HOUR = 20;
+            const int TOTAL_WORKING_DAY = 20;
+            int empHours = 0;
+            int totalHours = 0;
+            int wage;
+            int day=1;
+
+            while(totalHours<=100 && day<=20)
+            {
+                Random rnd = new Random();
+                int rnd_num = rnd.Next(0, 3);
+
+                switch (rnd_num)
+                {
+
+                    case PART_TIME:
+                        {
+                            empHours = 4;
+                            break;
+                        }
+
+                    case FULL_TIME:
+                        {
+                            empHours = 8;
+                            break;
+                        }
+
+                    default:
+                        {
+                            empHours = 0;
+                            break;
+                        }
+
+
+                }
+
+                totalHours += empHours;
+                day++;
+            }
+
+            wage = totalHours * RATE_PER_HOUR;
+
+            Console.WriteLine($"UC6- Total Wage for {day-1} is {wage}");
+            return wage;
+
+
+        }
+
 
     }
 
