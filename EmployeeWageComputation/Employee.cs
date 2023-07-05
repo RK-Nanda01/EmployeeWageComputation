@@ -25,6 +25,27 @@ namespace EmployeeWageComputation
 
 		}
 
+		//UC2//
+		public int DailyWage()
+		{
+
+			const int RATE_PER_HOUR = 20;
+			int empHour = 0;
+			int wage;
+
+
+       
+
+            if (this.IsPresent() == 1)
+			{
+				empHour = 8;
+			}
+
+			wage = RATE_PER_HOUR * empHour;
+
+			Console.WriteLine($"The Daily Wage of the Employee is {wage}");
+			return wage;
+		}
 		
 
 

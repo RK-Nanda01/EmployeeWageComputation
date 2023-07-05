@@ -10,6 +10,11 @@ class Program
         Employee emp = new Employee();
         emp.IsPresent();
         Console.ReadLine();
+
+
+        //UC2
+        emp.DailyWage();
+
     }
 
 }
