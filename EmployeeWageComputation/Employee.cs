@@ -46,11 +46,53 @@ namespace EmployeeWageComputation
 			Console.WriteLine($"The Daily Wage of the Employee is {wage}");
 			return wage;
 		}
-		
 
 
 
+        //UC3
 
-	}
+        public int PartTime()
+        {
+
+			const int PART_TIME = 1;
+			const int FULL_TIME = 2;
+			const int ABSENT = 0;
+            const int RATE_PER_HOUR = 20;
+            int empHours = 0;
+			int wage;
+
+            Random rnd = new Random();
+            int rnd_num = rnd.Next(0, 3);
+			
+
+			if(rnd_num == FULL_TIME)
+			{
+				empHours = 8;
+
+			}
+
+			else if(rnd_num == PART_TIME)
+			{
+				empHours = 4;
+			}
+
+			else
+			{
+				empHours = 0;
+			}
+
+			wage = empHours * RATE_PER_HOUR;
+
+			Console.WriteLine($"Emp Wage is {wage}");
+			return wage;
+
+
+        }
+
+
+    }
+
+
+
 }
 

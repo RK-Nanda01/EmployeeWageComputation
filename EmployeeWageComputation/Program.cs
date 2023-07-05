@@ -15,6 +15,10 @@ class Program
         //UC2
         emp.DailyWage();
 
+        //UC3
+        Console.WriteLine("UC3:-");
+        emp.PartTime();
+
     }
 
 }
