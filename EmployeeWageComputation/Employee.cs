@@ -132,6 +132,60 @@ namespace EmployeeWageComputation
         }
 
 
+		public int MonthlyWage()
+		{
+            const int PART_TIME = 1;
+            const int FULL_TIME = 2;
+            
+            const int RATE_PER_HOUR = 20;
+            const int TOTAL_WORKING_DAY = 20;
+            int empHours = 0;
+			int totalHours = 0;
+            int wage;
+			int day;
+
+			for(day = 1; day<=TOTAL_WORKING_DAY; day++)
+			{
+                Random rnd = new Random();
+                int rnd_num = rnd.Next(0, 3);
+
+                switch (rnd_num)
+                {
+
+                    case PART_TIME:
+                        {
+                            empHours = 4;
+                            break;
+                        }
+
+                    case FULL_TIME:
+                        {
+                            empHours = 8;
+                            break;
+                        }
+
+                    default:
+                        {
+                            empHours = 0;
+                            break;
+                        }
+
+
+                }
+
+                totalHours +=empHours;
+            }
+
+			wage = totalHours * RATE_PER_HOUR;
+
+			Console.WriteLine($"UC5- Total Wage for {day - 1} is {wage}");
+			return wage;
+
+
+
+        }
+
+
 
     }
 

@@ -22,6 +22,9 @@ class Program
         //UC4
         emp.PartTimeSwtich();
 
+        //UC5
+        emp.MonthlyWage();
+
     }
 
 }
