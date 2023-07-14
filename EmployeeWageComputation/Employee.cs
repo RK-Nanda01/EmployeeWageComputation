@@ -1,11 +1,19 @@
 ﻿using System;
 namespace EmployeeWageComputation
 {
+    
 	public class Employee
 	{
-		public int IsPresent()
+        const int PRESENT = 1;
+        const int RATE_PER_HOUR = 20;
+        const int PART_TIME = 1;
+        const int FULL_TIME = 2;
+        const int TOTAL_WORKING_DAY = 20;
+        //int totalHours = 0,wage = 0, empHour = 0;
+        
+        public int IsPresent()
 		{
-			const int PRESENT = 1;
+			//const int PRESENT = 1;
 			Random rnd = new Random();
 			int rnd_num = rnd.Next(0, 2);
 
@@ -29,13 +37,9 @@ namespace EmployeeWageComputation
 		public int DailyWage()
 		{
 
-			const int RATE_PER_HOUR = 20;
+			//const int RATE_PER_HOUR = 20;
 			int empHour = 0;
-			int wage;
-
-
-       
-
+            int wage;
             if (this.IsPresent() == 1)
 			{
 				empHour = 8;
@@ -54,12 +58,12 @@ namespace EmployeeWageComputation
         public int PartTime()
         {
 
-			const int PART_TIME = 1;
-			const int FULL_TIME = 2;
-			const int ABSENT = 0;
-            const int RATE_PER_HOUR = 20;
-            int empHours = 0;
-			int wage;
+			//const int PART_TIME = 1;
+			//const int FULL_TIME = 2;
+			//const int ABSENT = 0;
+   //         const int RATE_PER_HOUR = 20;
+            int empHour = 0;
+            int wage;
 
             Random rnd = new Random();
             int rnd_num = rnd.Next(0, 3);
@@ -67,21 +71,21 @@ namespace EmployeeWageComputation
 
 			if(rnd_num == FULL_TIME)
 			{
-				empHours = 8;
+				empHour = 8;
 
 			}
 
 			else if(rnd_num == PART_TIME)
 			{
-				empHours = 4;
+				empHour = 4;
 			}
 
 			else
 			{
-				empHours = 0;
+				empHour = 0;
 			}
 
-			wage = empHours * RATE_PER_HOUR;
+			wage = empHour * RATE_PER_HOUR;
 
 			Console.WriteLine($"Emp Wage is {wage}");
 			return wage;
@@ -91,11 +95,11 @@ namespace EmployeeWageComputation
 
 		public int PartTimeSwtich()
 		{
-            const int PART_TIME = 1;
-            const int FULL_TIME = 2;
-            const int ABSENT = 0;
-            const int RATE_PER_HOUR = 20;
-            int empHours = 0;
+            //const int PART_TIME = 1;
+            //const int FULL_TIME = 2;
+            //const int ABSENT = 0;
+            //const int RATE_PER_HOUR = 20;
+            int empHour = 0;
             int wage;
 
             Random rnd = new Random();
@@ -106,26 +110,26 @@ namespace EmployeeWageComputation
 
 				case PART_TIME:
 				{
-						empHours = 4;
+						empHour = 4;
 						break;
 				}
 
 				case FULL_TIME:
 				{
-						empHours = 8;
+						empHour = 8;
 						break;
 				}
 
 				 default:
 				{
-						empHours = 0;
+						empHour = 0;
 						break;
 				}
 
 
 			}
 
-			wage = empHours * RATE_PER_HOUR;
+			wage = empHour * RATE_PER_HOUR;
 			Console.WriteLine($"UC-4 Wage of Employee is {wage}");
 			return wage;
 
@@ -134,15 +138,15 @@ namespace EmployeeWageComputation
 
 		public int MonthlyWage()
 		{
-            const int PART_TIME = 1;
-            const int FULL_TIME = 2;
+            //const int PART_TIME = 1;
+            //const int FULL_TIME = 2;
             
-            const int RATE_PER_HOUR = 20;
-            const int TOTAL_WORKING_DAY = 20;
-            int empHours = 0;
-			int totalHours = 0;
+            //const int RATE_PER_HOUR = 20;
+            //const int TOTAL_WORKING_DAY = 20;
+            int empHour = 0;
+            int totalHours = 0;
             int wage;
-			int day;
+            int day;
 
 			for(day = 1; day<=TOTAL_WORKING_DAY; day++)
 			{
@@ -154,26 +158,26 @@ namespace EmployeeWageComputation
 
                     case PART_TIME:
                         {
-                            empHours = 4;
+                            empHour = 4;
                             break;
                         }
 
                     case FULL_TIME:
                         {
-                            empHours = 8;
+                            empHour = 8;
                             break;
                         }
 
                     default:
                         {
-                            empHours = 0;
+                            empHour = 0;
                             break;
                         }
 
 
                 }
 
-                totalHours +=empHours;
+                totalHours +=empHour;
             }
 
 			wage = totalHours * RATE_PER_HOUR;
@@ -189,12 +193,12 @@ namespace EmployeeWageComputation
 		public int TotalWage()
 		{
 
-            const int PART_TIME = 1;
-            const int FULL_TIME = 2;
+            //const int PART_TIME = 1;
+            //const int FULL_TIME = 2;
 
-            const int RATE_PER_HOUR = 20;
-            const int TOTAL_WORKING_DAY = 20;
-            int empHours = 0;
+            //const int RATE_PER_HOUR = 20;
+            //const int TOTAL_WORKING_DAY = 20;
+            int empHour = 0;
             int totalHours = 0;
             int wage;
             int day=1;
@@ -209,26 +213,26 @@ namespace EmployeeWageComputation
 
                     case PART_TIME:
                         {
-                            empHours = 4;
+                            empHour = 4;
                             break;
                         }
 
                     case FULL_TIME:
                         {
-                            empHours = 8;
+                            empHour = 8;
                             break;
                         }
 
                     default:
                         {
-                            empHours = 0;
+                            empHour = 0;
                             break;
                         }
 
 
                 }
 
-                totalHours += empHours;
+                totalHours += empHour;
                 day++;
             }
 

@@ -14,19 +14,24 @@ class Program
 
         //UC2
         emp.DailyWage();
+        Console.ReadLine();
 
         //UC3
         Console.WriteLine("UC3:-");
         emp.PartTime();
+        Console.ReadLine();
 
         //UC4
         emp.PartTimeSwtich();
+        Console.ReadLine();
 
         //UC5
         emp.MonthlyWage();
+        Console.ReadLine();
 
         //UC6
         emp.TotalWage();
+        Console.ReadLine();
 
     }
 
