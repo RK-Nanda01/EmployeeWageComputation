@@ -9,11 +9,9 @@ namespace EmployeeWageComputation
         const int PART_TIME = 1;
         const int FULL_TIME = 2;
         const int TOTAL_WORKING_DAY = 20;
-        //int totalHours = 0,wage = 0, empHour = 0;
-        
+       
         public int IsPresent()
 		{
-			//const int PRESENT = 1;
 			Random rnd = new Random();
 			int rnd_num = rnd.Next(0, 2);
 
@@ -36,8 +34,6 @@ namespace EmployeeWageComputation
 		//UC2//
 		public int DailyWage()
 		{
-
-			//const int RATE_PER_HOUR = 20;
 			int empHour = 0;
             int wage;
             if (this.IsPresent() == 1)
@@ -54,14 +50,8 @@ namespace EmployeeWageComputation
 
 
         //UC3
-
         public int PartTime()
-        {
-
-			//const int PART_TIME = 1;
-			//const int FULL_TIME = 2;
-			//const int ABSENT = 0;
-   //         const int RATE_PER_HOUR = 20;
+        { 
             int empHour = 0;
             int wage;
 
@@ -95,10 +85,7 @@ namespace EmployeeWageComputation
 
 		public int PartTimeSwtich()
 		{
-            //const int PART_TIME = 1;
-            //const int FULL_TIME = 2;
-            //const int ABSENT = 0;
-            //const int RATE_PER_HOUR = 20;
+           
             int empHour = 0;
             int wage;
 
@@ -138,11 +125,6 @@ namespace EmployeeWageComputation
 
 		public int MonthlyWage()
 		{
-            //const int PART_TIME = 1;
-            //const int FULL_TIME = 2;
-            
-            //const int RATE_PER_HOUR = 20;
-            //const int TOTAL_WORKING_DAY = 20;
             int empHour = 0;
             int totalHours = 0;
             int wage;
@@ -192,12 +174,6 @@ namespace EmployeeWageComputation
 
 		public int TotalWage()
 		{
-
-            //const int PART_TIME = 1;
-            //const int FULL_TIME = 2;
-
-            //const int RATE_PER_HOUR = 20;
-            //const int TOTAL_WORKING_DAY = 20;
             int empHour = 0;
             int totalHours = 0;
             int wage;
